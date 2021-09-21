@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SetLength from './SetLength'
+import Display from './Display'
+import TimerCtrl from './TimerCtrl'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <article>
+        <h1>25 + 5 Clock</h1>
+        <div className='set-lengths'>
+          <SetLength name='break'/>
+          <SetLength name='session'/>
+        </div>
+        <Display />
+        <TimerCtrl />
+      </article>
+    </main> 
+  )
 }
 
 export default App;
